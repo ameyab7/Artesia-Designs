@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.title {
+  text-align: center;
+  color: #212EA0;
+  font-size: 55px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 70px 0 30px;
+  font-family: 'CALIBRI', cursive;
+  position: relative;
+  padding: 20px;
+  background: linear-gradient(to bottom right, #f5f7fa, #c3cfe2); /* Background gradient */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+.title h3 {
+  font-size: 32px;
+  color: #212EA0;
+  margin-top: 5px;
+  text-transform: none;
+  animation: fadeIn 2s ease-in-out; /* Fade-in animation */
+}
+
+/* Keyframes for fadeIn animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

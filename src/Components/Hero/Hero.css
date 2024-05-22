@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Great+Vibes&display=swap');
+
+.header {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)), url('../../assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: lightblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 20px; /* Optional: padding for better spacing */
+}
+
+.header-text {
+    font-family: 'CALIBRI', cursive;
+    font-size: 36px; /* Adjusted font size for the title */
+    text-align: center;
+    position: absolute;
+    width: 80%; /* Adjusted width to better fit the text */
+    top: 40%; /* Adjusted to move the text higher up */
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.4); /* Slightly lighter semi-transparent background for better readability */
+    padding: 20px; /* More padding for better spacing */
+    margin: 0 auto;
+    line-height: 1.3;
+    opacity: 0;
+    animation: fadeIn 3s ease forwards;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Slightly smaller shadow for less distraction */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    color: #f0f8ff; /* Slightly lighter color for better contrast */
+}
+
+.header-text h1 {
+    font-size: 48px; /* Larger font size for the main title */
+    margin-bottom: 10px;
+}
+
+.header-text p {
+    font-size: 20px; /* Adjusted font size for the subtitle */
+    margin-top: 10px;
+    font-family: 'Great Vibes', cursive; /* Elegant font for the subtitle */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}

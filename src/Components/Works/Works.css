@@ -1,0 +1,113 @@
+/* Ensure no horizontal overflow */
+body, html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+/* Universal box-sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Enhanced CSS for Works Section */
+.works-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.works {
+    margin: 20px auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures images wrap in small screens */
+    padding: 0 10px; /* Add padding to ensure content fits within the viewport */
+}
+
+.work img {
+    width: 100%;
+    border-radius: 10px; /* Adjusted to match the work container */
+    display: block;
+    transition: transform 0.3s ease-in-out; /* Smooth zoom effect */
+}
+
+.work {
+    flex-basis: calc(33.33% - 30px); /* Adjusted to ensure three items fit per row with margins */
+    position: relative;
+    overflow: hidden; /* Ensures nothing spills out */
+    margin: 15px; /* Adjust this value as needed to manage spacing */
+    border: 2px solid #ccc; /* Add border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth shadow and transform effect */
+    background-color: #fff; /* Ensure background color is white */
+}
+
+.work:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+.caption {
+    border-radius: 10px; /* Match the border-radius of the work container */
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 15, 152, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.4s;
+    padding: 0; /* Ensure no padding is affecting the size */
+}
+
+.work:hover .caption {
+    opacity: 1;
+    padding-top: 0;
+}
+
+/* For zooming effect on click */
+.work:active img {
+    transform: scale(1.1); /* Zoom in on click */
+}
+
+.see-more-btn {
+    margin: 7px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #161c6b;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.see-more-btn:hover {
+    background-color: #161c6b;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .work {
+        flex-basis: calc(50% - 30px); /* Two items per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .work {
+        flex-basis: calc(100% - 30px); /* One item per row on very small screens */
+    }
+}
